@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: test | ayumi043的blog]]></title>
+  <link href="http://ayumi043.github.io/blog/categories/test/atom.xml" rel="self"/>
+  <link href="http://ayumi043.github.io/"/>
+  <updated>2013-07-17T11:39:01+08:00</updated>
+  <id>http://ayumi043.github.io/</id>
+  <author>
+    <name><![CDATA[ayumi043]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[hello word!]]></title>
+    <link href="http://ayumi043.github.io/blog/2013/07/17/title/"/>
+    <updated>2013-07-17T11:33:00+08:00</updated>
+    <id>http://ayumi043.github.io/blog/2013/07/17/title</id>
+    <content type="html"><![CDATA[<p>hi~ world!!!</p>
+]]></content>
+  </entry>
+  
+</feed>
