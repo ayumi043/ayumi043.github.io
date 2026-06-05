@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://ayumi043.github.io/sitemap.xml 
