@@ -33,6 +33,10 @@
     }
     .child {
       display: none;
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      padding:3px;
     }
 
     .card:hover .child {
@@ -41,7 +45,8 @@
 
     .edit-btn,
     .delete-btn {
-      font-size: 12px;
+      font-size: 11px;
+      cursor: pointer;
     }
 
     .search-engine-btn {
@@ -531,10 +536,10 @@
         card.innerHTML = `
           <div class="flex">
             <a href="${link.url}" class="absolute"><h4 class="font-medium">${link.name}</h4></a>
-            <div class="child">
-                <span class="edit-btn" data-id="${link.id}">编辑</span>
-                <span class="delete-btn" data-id="${link.id}">删除</span>
-            </div>
+          </div>
+          <div class="child">
+              <span class="edit-btn" data-id="${link.id}">编辑</span>
+              <span class="delete-btn" data-id="${link.id}">删除</span>
           </div>
         `;
 
