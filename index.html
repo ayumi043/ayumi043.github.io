@@ -31,17 +31,12 @@
       position: relative;
       height: 38px;
     }
+
     .child {
-      display: none;
-      position: absolute;
-      left: 0px;
-      bottom: 0px;
-      padding:3px;
+      /* display: none; */
     }
 
-    .card:hover .child {
-      display: block;
-    }
+    .card:hover .child {}
 
     .edit-btn,
     .delete-btn {
@@ -70,7 +65,7 @@
 <body>
   <div>
     <!-- 头部区域 -->
-    <header style="padding:8px 0px 0px 2px;">
+    <header style="padding:8px 0px 0px 2px;margin-bottom: 22px;">
 
       <!-- 搜索区域 -->
       <div class="relative">
@@ -104,11 +99,14 @@
     </main>
 
     <!-- 页脚 -->
-    <footer class="mt-16" style="clear:both;"></footer>
+    <footer style="clear:both;margin-bottom:8px;"></footer>
+
+    <span style="font-size: 12px;cursor:pointer" onclick="toggle('.child')">编辑</span>
+
   </div>
 
   <!-- 添加/编辑链接模态框 -->
-  <div id="link-modal" class="fixed" style="margin-top:30px;border-top: 1px solid #999;padding-top: 20px;">
+  <div id="link-modal" class="fixed" style="margin-top:18px;border-top: 1px solid #999;padding-top: 20px;">
     <div class="bg-white" id="modal-content">
       <h4 class="text-xl" id="modal-title" onclick="toggle('#link-form')">添加新链接</h4>
       <form id="link-form" style="display: none;">
@@ -537,7 +535,7 @@
           <div class="flex">
             <a href="${link.url}" class="absolute"><h4 class="font-medium">${link.name}</h4></a>
           </div>
-          <div class="child">
+          <div class="child" style="display: none;">
               <span class="edit-btn" data-id="${link.id}">编辑</span>
               <span class="delete-btn" data-id="${link.id}">删除</span>
           </div>
@@ -577,12 +575,23 @@
 
   <script>
     function toggle(selector) {
-      const el = document.querySelector(selector);
-      if (el.style.display === 'none') {
-        el.style.display = 'block';
-      } else {
-        el.style.display = 'none';
-      }
+      // const el = document.querySelector(selector);
+      // if (el.style.display === 'none') {
+      //   el.style.display = 'block';
+      // } else {
+      //   el.style.display = 'none';
+      // }
+
+      // 获取所有匹配的元素（返回数组-like 集合）
+      const elements = document.querySelectorAll(selector);
+      // 循环遍历每一个元素，单独切换显示/隐藏
+      elements.forEach(el => {
+        if (el.style.display === 'none') {
+          el.style.display = 'block';
+        } else {
+          el.style.display = 'none';
+        }
+      });
     }
   </script>
 
